@@ -8,7 +8,7 @@ class Configurater:MonoBehaviour
         if (!CurrentConfig.IsInitialize)
         {
             CurrentConfig.Level = 1;
-            CurrentConfig.IsFullScreen = true;
+            CurrentConfig.IsFullScreen = false;
             CurrentConfig.Quality = 3;
             CurrentConfig.Volume = 1;
             CurrentConfig.Resolution = Screen.resolutions.Length - 1;
