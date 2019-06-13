@@ -2780,7 +2780,6 @@ GameObject:
   - component: {fileID: 255842169}
   - component: {fileID: 255842172}
   - component: {fileID: 255842171}
-  - component: {fileID: 255842170}
   m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
@@ -2808,19 +2807,6 @@ RectTransform:
   m_AnchoredPosition: {x: 467.93195, y: -170.52168}
   m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &255842170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255842168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af38c452e6fca304abd2a7cdfd6504fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VolumeSlider: {fileID: 1066235558}
 --- !u!114 &255842171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10896,6 +10882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066235557}
   - component: {fileID: 1066235558}
+  - component: {fileID: 1066235559}
   m_Layer: 5
   m_Name: AudioSlider
   m_TagString: Untagged
@@ -10974,9 +10961,32 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1066235559}
+        m_MethodName: VolumePressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1066235559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066235556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af38c452e6fca304abd2a7cdfd6504fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1072286083
 GameObject:
   m_ObjectHideFlags: 0
@@ -21839,7 +21849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc70cead9dc2764695cf7bb948f4b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResolutinDropdown: {fileID: 2084324091}
 --- !u!114 &2084324091
 MonoBehaviour:
   m_ObjectHideFlags: 0

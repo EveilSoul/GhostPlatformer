@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitPressed()
     {
-        Debug.Log("Quit");
+        CurrentConfig.OnQuit();
         Application.Quit();
     }
 }

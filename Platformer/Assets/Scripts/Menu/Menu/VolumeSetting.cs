@@ -5,10 +5,17 @@ using UnityEngine.UI;
 
 public class VolumeSetting : MonoBehaviour
 {
-    public Slider VolumeSlider;
+    Slider VolumeSlider;
 
-    public void Update()
+    public void Start()
     {
+        VolumeSlider = gameObject.GetComponent<Slider>();
+        VolumeSlider.value = CurrentConfig.Volume;
+    }
+
+    public void VolumePressed()
+    {
+        CurrentConfig.Volume = VolumeSlider.value;
         AudioListener.volume = VolumeSlider.value;
     }
 }
