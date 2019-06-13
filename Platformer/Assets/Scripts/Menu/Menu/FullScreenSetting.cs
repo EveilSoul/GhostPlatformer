@@ -7,14 +7,16 @@ public class FullScreenSetting : MonoBehaviour
 {
     bool isFullScreen;
 
-    public void Awake()
+    public void Start()
     {
-        isFullScreen = Screen.fullScreen;
+        isFullScreen = CurrentConfig.IsFullScreen;
+        gameObject.GetComponent<Toggle>().isOn = !isFullScreen;
     }
 
     public void FullScreenToggle()
     {
         isFullScreen = !isFullScreen;
-        Screen.fullScreen = isFullScreen;
+        Screen.fullScreen = !Screen.fullScreen;
+        CurrentConfig.IsFullScreen = isFullScreen;
     }
 }

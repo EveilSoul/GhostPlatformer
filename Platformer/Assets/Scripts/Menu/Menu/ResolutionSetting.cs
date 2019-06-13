@@ -7,9 +7,8 @@ class ResolutionSetting : MonoBehaviour
 {
     Resolution[] resolutions;
     List<string> resolDescr;
-    public Dropdown ResolutinDropdown;
 
-    public void Awake()
+    public void Start()
     {
         resolutions = Screen.resolutions;
         resolDescr = new List<string>();
@@ -18,16 +17,19 @@ class ResolutionSetting : MonoBehaviour
         {
             resolDescr.Add(e.width + "x" + e.height);
         }
+
+        var ResolutinDropdown = gameObject.GetComponent<Dropdown>();
         ResolutinDropdown.ClearOptions();
         ResolutinDropdown.AddOptions(resolDescr);
 
-        Screen.SetResolution(resolutions[resolutions.Length - 1].height, resolutions[resolutions.Length - 1].width, Screen.fullScreen);
-        ResolutinDropdown.value = resolutions.Length - 1;
+
+        Resolution(CurrentConfig.Resolution);
+        ResolutinDropdown.value = CurrentConfig.Resolution;
     }
 
     public void Resolution(int res)
     {
-        Debug.Log(res);
+        CurrentConfig.Resolution = res;
         Screen.SetResolution(resolutions[res].width, resolutions[res].height, Screen.fullScreen);
     }
 }
