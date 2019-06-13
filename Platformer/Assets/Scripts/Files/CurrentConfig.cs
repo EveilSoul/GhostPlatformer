@@ -2,6 +2,7 @@
 
 static class CurrentConfig
 {
+    public static bool IsInitialize { get; private set; }
 
     public static int Level { get; set; }
     public static bool IsFullScreen { get; set; }
@@ -18,7 +19,12 @@ static class CurrentConfig
 
         
         if (config == null)
+        {
+            IsInitialize = false;
             return;
+        }
+        IsInitialize = true;
+            
 
         Level = int.Parse(config["Level"]);
         IsFullScreen = bool.Parse(config["IsFullScreen"]);
