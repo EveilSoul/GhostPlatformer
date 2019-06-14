@@ -45,6 +45,9 @@ public class CharacterController : MonoBehaviour
                     isJump = true;
                     currentSpeed = FlyingSpeed;
                 }
+
+                if (hit.collider.GetComponent<MovingObject>() != null)
+                    transform.position += hit.collider.GetComponent<MovingObject>().Offset;
             }
             //Debug.Log(currentSpeed);
 
