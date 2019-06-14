@@ -272,8 +272,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4751371100547257358}
+  - component: {fileID: 2494129347132314886}
+  - component: {fileID: 1338131728634811572}
+  - component: {fileID: 1738614868731697076}
+  - component: {fileID: 5619735319447605417}
+  - component: {fileID: 5771690424315981658}
   m_Layer: 0
-  m_Name: Ghost (1)
+  m_Name: Hollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,3 +300,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2494129347132314886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623015664845317661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975aef48bdeb9984592dec8f77275fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingState: {fileID: 1338131728634811572}
+--- !u!114 &1338131728634811572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623015664845317661}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf47065dfc6aa849b653ef9dc56918f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitions:
+  - {fileID: 1738614868731697076}
+  transformToMove: {fileID: 4751371100547257358}
+  speed: {x: 1.5, y: 0, z: 0}
+--- !u!114 &1738614868731697076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623015664845317661}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1d41d53cf87f84ba86d6a96e77f107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetState: {fileID: 5619735319447605417}
+  time: 2
+--- !u!114 &5619735319447605417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623015664845317661}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc1770da964ec24a9e0f89824a78451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitions:
+  - {fileID: 5771690424315981658}
+  transformToRotate: {fileID: 0}
+  Transition: {fileID: 5771690424315981658}
+  RotationSpeed: 3
+  Angle: -90
+--- !u!114 &5771690424315981658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623015664845317661}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b321997f2ad8b4d47adcd3bf8d2b0b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetState: {fileID: 1338131728634811572}
+  IsCondition: 0
