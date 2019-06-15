@@ -23,6 +23,11 @@ public class StateMachine : MonoBehaviour
         Reset();
     }
 
+    private void OnEnable()
+    {
+        Reset();
+    }
+
     /// Переводит стейт машину в начальное состояние.
     public void Reset()
     {

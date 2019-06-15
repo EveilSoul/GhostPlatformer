@@ -17,12 +17,14 @@ public class CharacterController : MonoBehaviour
     private Rigidbody rigidbody;
     private RaycastHit hit;
     private float currentSpeed;
+    private CapsuleCollider collider;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = gameObject.GetComponent<Rigidbody>();
         currentSpeed = Speed;
+        collider = gameObject.GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class CharacterController : MonoBehaviour
         {
             gameObject.transform.position = StartPoition.position;
             rigidbody.velocity = Vector3.zero;
+            collider.enabled = true;
         }
         else
         {
