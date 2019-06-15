@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4506805705140694651}
   - component: {fileID: 3897683469360349807}
   - component: {fileID: 852130759781132766}
+  - component: {fileID: 2911832068649399206}
   m_Layer: 0
   m_Name: Hollow 1
   m_TagString: Untagged
@@ -50,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975aef48bdeb9984592dec8f77275fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingState: {fileID: 0}
+  startingState: {fileID: 5489225160742072911}
 --- !u!114 &5489225160742072911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,9 +65,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitions:
-  - {fileID: 0}
+  - {fileID: 7755629190978485319}
   transformToMove: {fileID: 0}
-  speed: {x: 1.5, y: 0, z: 0}
+  speed: {x: 0, y: 0, z: 1.5}
 --- !u!114 &7755629190978485319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1d41d53cf87f84ba86d6a96e77f107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetState: {fileID: 0}
+  targetState: {fileID: 6397656240489509800}
   time: 2
 --- !u!114 &6397656240489509800
 MonoBehaviour:
@@ -94,11 +95,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitions:
-  - {fileID: 0}
+  - {fileID: 4506805705140694651}
   transformToRotate: {fileID: 0}
-  Transition: {fileID: 0}
+  Transition: {fileID: 4506805705140694651}
   RotationSpeed: 3
-  Angle: -90
+  Angle: 90
 --- !u!114 &4506805705140694651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b321997f2ad8b4d47adcd3bf8d2b0b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetState: {fileID: 0}
+  targetState: {fileID: 5489225160742072911}
   IsCondition: 0
 --- !u!136 &3897683469360349807
 CapsuleCollider:
@@ -139,8 +140,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66777281eb2c17445aa8784da8346758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 4
+  Radius: 6
   speed: 3
+--- !u!54 &2911832068649399206
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911832068649399205}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1001 &7433210562220960507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,7 +193,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
         type: 3}
@@ -186,7 +203,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
         type: 3}
@@ -201,7 +218,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
         type: 3}
@@ -213,12 +230,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d78ea35c543823041a773fec7e899cb1, type: 2}
-    - target: {fileID: 6200443131042155592, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
+    - target: {fileID: 8249115927918959592, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f4e2a2fe007bc7f4a8e633e50139ea27, type: 2}
-    - target: {fileID: 8249115927918959592, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
+    - target: {fileID: 6200443131042155592, guid: b8fe3b4bccb8f5645adcf2bcea7ac2a4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

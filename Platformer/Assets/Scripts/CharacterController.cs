@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
@@ -32,9 +33,10 @@ public class CharacterController : MonoBehaviour
     {
         if (gameObject.transform.position.y <= DeathHeight)
         {
-            gameObject.transform.position = StartPoition.position;
-            rigidbody.velocity = Vector3.zero;
-            collider.enabled = true;
+            //gameObject.transform.position = StartPoition.position;
+            //rigidbody.velocity = Vector3.zero;
+            //collider.enabled = true;
+            SceneManager.LoadScene("SampleScene");
         }
         else
         {

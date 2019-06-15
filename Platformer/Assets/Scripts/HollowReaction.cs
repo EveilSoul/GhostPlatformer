@@ -50,6 +50,7 @@ public class HollowReaction : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             PlayerInfo.Instance.PlayerCollider.enabled = false;
+            isFollow = false;
         }
     }
 }
