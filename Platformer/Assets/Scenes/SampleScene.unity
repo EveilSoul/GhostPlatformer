@@ -9947,12 +9947,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.14242533, y: 0.6926146, z: -0.14242533, w: 0.6926146}
-  m_LocalPosition: {x: -2.664, y: 1.4475384, z: 0}
+  m_LocalRotation: {x: 0.14242533, y: 0.69261456, z: -0.14242534, w: 0.6926146}
+  m_LocalPosition: {x: -2.6640015, y: 1.4475384, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5006512735298826506}
-  m_RootOrder: 2
+  m_Father: {fileID: 1008557048}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 23.240002, y: 90, z: 0}
 --- !u!1 &975021946
 GameObject:
@@ -10507,6 +10507,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1409099639}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1008557047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1008557048}
+  - component: {fileID: 1008557049}
+  m_Layer: 0
+  m_Name: CameraMover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1008557048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008557047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 963194228}
+  m_Father: {fileID: 5006512735298826506}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1008557049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008557047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae9fdce6b112f2469d22f462647ccf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpAngle: 65
+  MaxDownAngle: -50
+  Sensivity: -3
 --- !u!1 &1011597902
 GameObject:
   m_ObjectHideFlags: 0
@@ -23704,7 +23751,7 @@ Transform:
   m_Children:
   - {fileID: 1243445300791113658}
   - {fileID: 2013049892746562415}
-  - {fileID: 963194228}
+  - {fileID: 1008557048}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -179.26701, z: 0}
