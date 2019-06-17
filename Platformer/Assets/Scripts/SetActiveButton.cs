@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SetActiveButton : MonoBehaviour
+{
+    public GameObject Goal;
+    public float ReactDistance = .5f;
+
+    private GameObject player;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Goal.SetActive(false);
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Vector3.Distance(gameObject.transform.position, player.transform.position) < ReactDistance)
+        {
+            Goal.SetActive(true);
+            Debug.Log(" setActiveButton button has pushed");
+        }
+    }
+}

@@ -26,6 +26,7 @@ public class CharacterController : MonoBehaviour
         rigidbody = gameObject.GetComponent<Rigidbody>();
         currentSpeed = Speed;
         collider = gameObject.GetComponent<CapsuleCollider>();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
