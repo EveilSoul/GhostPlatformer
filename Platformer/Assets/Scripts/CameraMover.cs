@@ -19,7 +19,7 @@ public class CameraMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rotation -= Input.GetAxis("Mouse Y") * Sensivity;
+        rotation -= Input.GetAxis("Mouse Y") * Sensivity * Time.deltaTime;
         rotation = Mathf.Clamp(rotation, MaxDownAngle, MaxUpAngle);
         transform.localEulerAngles = new Vector3(baseRotation.x, baseRotation.y, baseRotation.z + rotation);
     }

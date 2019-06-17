@@ -19,6 +19,7 @@ public class CharacterController : MonoBehaviour
     private RaycastHit hit;
     private float currentSpeed;
     private CapsuleCollider collider;
+    private float acceleration = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -46,10 +47,16 @@ public class CharacterController : MonoBehaviour
             if (Physics.Raycast(gameObject.transform.position, Vector3.down, out hit) && hit.distance <= MaxJumpDistance)
             {
                 currentSpeed = Speed;
+                acceleration = 1;
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     isJump = true;
                     currentSpeed = FlyingSpeed;
+                    var trampoline = hit.collider.GetComponent<Trampoline>();
+                    if (trampoline != null)
+                    {
+                        acceleration = trampoline.JumpAcceleration;
+                    }
                 }
 
                 if (hit.collider.GetComponent<MovingObject>() != null)
@@ -64,11 +71,11 @@ public class CharacterController : MonoBehaviour
             gameObject.transform.Rotate(0, mouseX, 0);
             if (isJump && Input.GetKey(KeyCode.W))
             {
-                rigidbody.AddForce(transform.right.x * JumpForce, JumpForce * JumpHeight, transform.right.z * JumpForce);
+                rigidbody.AddForce(transform.right.x * JumpForce, JumpForce * JumpHeight * acceleration, transform.right.z * JumpForce);
             }
             else if (isJump)
             {
-                rigidbody.AddForce(0, JumpForce * JumpHeight, 0);
+                rigidbody.AddForce(0, JumpForce * JumpHeight * acceleration, 0);
             }
             gameObject.transform.Translate(deltaX, 0, deltaZ);
         }

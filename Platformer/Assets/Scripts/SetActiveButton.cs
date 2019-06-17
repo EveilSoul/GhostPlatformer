@@ -6,6 +6,7 @@ public class SetActiveButton : MonoBehaviour
 {
     public GameObject Goal;
     public float ReactDistance = .5f;
+    public float DownDustance = .3f;
 
     private GameObject player;
 
@@ -21,7 +22,9 @@ public class SetActiveButton : MonoBehaviour
     {
         if (Vector3.Distance(gameObject.transform.position, player.transform.position) < ReactDistance)
         {
+            //transform.Translate(0, -DownDustance, 0);
             Goal.SetActive(true);
+            gameObject.GetComponent<StateMachine>().enabled = true;
             Debug.Log(" setActiveButton button has pushed");
         }
     }
