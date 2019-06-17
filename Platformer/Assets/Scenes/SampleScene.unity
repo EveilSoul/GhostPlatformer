@@ -10551,8 +10551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae9fdce6b112f2469d22f462647ccf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpAngle: 65
-  MaxDownAngle: -50
+  MaxUpAngle: 25
+  MaxDownAngle: -20
   Sensivity: -3
 --- !u!1 &1011597902
 GameObject:
@@ -24280,7 +24280,7 @@ MonoBehaviour:
   JumpForce: 80
   MaxJumpDistance: 0.2
   RotationSpeed: 75
-  JumpHeight: 2
+  JumpHeight: 3
   DeathHeight: -25
   StartPoition: {fileID: 1246563985}
 --- !u!136 &8296172669240492827
