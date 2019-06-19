@@ -9,6 +9,9 @@ public class PlayerInfo : MonoBehaviour
     public Transform PlayerTransform;
     public CapsuleCollider PlayerCollider;
 
+    public AudioClip ButtonDown;
+    public AudioClip DoorOpen;
+
     void Start()
     {
         Instance = this;

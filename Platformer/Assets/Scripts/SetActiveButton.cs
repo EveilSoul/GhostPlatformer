@@ -10,10 +10,12 @@ public class SetActiveButton : MonoBehaviour
     public float DownDustance = .3f;
 
     private GameObject player;
+    private bool isActive;
 
     // Start is called before the first frame update
     void Start()
     {
+        isActive = false;
         Goal.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -21,12 +23,14 @@ public class SetActiveButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(gameObject.transform.position, player.transform.position) < ReactDistance)
+        if (!isActive && Vector3.Distance(gameObject.transform.position, player.transform.position) < ReactDistance)
         {
             //transform.Translate(0, -DownDustance, 0);
             Goal.SetActive(true);
             gameObject.GetComponent<StateMachine>().enabled = true;
+            AudioSource.PlayClipAtPoint(PlayerInfo.Instance.ButtonDown, gameObject.transform.position);
             Debug.Log(" setActiveButton button has pushed");
+            isActive = true;
         }
     }
 }
