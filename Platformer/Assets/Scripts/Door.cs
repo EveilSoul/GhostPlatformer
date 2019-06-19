@@ -6,6 +6,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public Button[] Buttons;
+    public StateMachine[] DoorComponents;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,8 @@ public class Door : MonoBehaviour
     {
         if(Buttons.All(x => x.HasPushed))
         {
+            foreach (var machine in DoorComponents)
+                machine.enabled = true;
             Debug.Log("Door is open");
             // todo
         }
