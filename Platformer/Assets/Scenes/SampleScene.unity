@@ -24326,6 +24326,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Buttons:
   - {fileID: 6145236332526093987}
+  DoorComponents:
+  - {fileID: 594646662}
+  - {fileID: 1822951774}
 --- !u!23 &2783938518613505421
 MeshRenderer:
   m_ObjectHideFlags: 0
