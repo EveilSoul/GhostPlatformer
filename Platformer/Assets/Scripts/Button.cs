@@ -15,7 +15,7 @@ public class Button : MonoBehaviour
     void Start()
     {
         isActive = false;
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = PlayerInfo.Instance.Player;
         door = GameObject.FindGameObjectWithTag("Door").GetComponent<Door>();
     }
 

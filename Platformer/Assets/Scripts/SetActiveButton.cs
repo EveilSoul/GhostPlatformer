@@ -17,7 +17,7 @@ public class SetActiveButton : MonoBehaviour
     {
         isActive = false;
         Goal.SetActive(false);
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = PlayerInfo.Instance.Player;
     }
 
     // Update is called once per frame

@@ -12,7 +12,7 @@ public class PlayerInfo : MonoBehaviour
     public AudioClip ButtonDown;
     public AudioClip DoorOpen;
 
-    void Start()
+    void Awake()
     {
         Instance = this;
         PlayerCollider = Player.GetComponent<CapsuleCollider>();
