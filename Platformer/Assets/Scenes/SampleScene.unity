@@ -2362,6 +2362,8 @@ MonoBehaviour:
   Player: {fileID: 8296172669240492825}
   PlayerTransform: {fileID: 0}
   PlayerCollider: {fileID: 0}
+  ButtonDown: {fileID: 8300000, guid: 922cec293b56ce64192b308522b92e40, type: 3}
+  DoorOpen: {fileID: 8300000, guid: 13ab6aa53ac164c4a91da35557069418, type: 3}
 --- !u!4 &235291210
 Transform:
   m_ObjectHideFlags: 0
@@ -13324,7 +13326,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0c68eca12412b714d9eb5f434d827be5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.728
   m_Pitch: 1
   Loop: 1
   Mute: 0
